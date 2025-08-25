@@ -37,9 +37,7 @@ export default class App extends React.Component {
     handleReset = () => {
         this.setState({count: 0, isCounting: false});
         clearInterval(this.timerId);
-        if (localStorage.getItem('count')) {
-            localStorage.setItem('count', 0);
-        };
+        localStorage.setItem('count', 0);
     }
 
     render() {
